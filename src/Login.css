@@ -1,0 +1,19 @@
+div{
+    color: #fff;
+    font-size: .8rem;
+}
+
+div form {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
