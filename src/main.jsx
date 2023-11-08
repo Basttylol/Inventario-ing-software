@@ -4,7 +4,7 @@ import { App } from './App'
 import "./index.css"
 
 import appFirebase from './credenciales'
-import {getAuth, onAuthStateChanged} from 'firebase/auth'
+import {getAuth} from 'firebase/auth'
 
 const auth = getAuth(appFirebase)
 
