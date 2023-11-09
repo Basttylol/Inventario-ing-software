@@ -4,10 +4,10 @@ import '../Login.css'
 import appFirebase from '../credenciales'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 
+
 const auth = getAuth(appFirebase)
 
 export function Login(){
-
 
     const functAutenticacion = async(e) => {
         e.preventDefault();
@@ -16,6 +16,7 @@ export function Login(){
 
         try{
             await signInWithEmailAndPassword(auth, correo, pass)
+            console.log("Inicio de sesion correcto")
         } catch(error){
             if(correo === "" || pass === ""){
                 alert("Debe ingresar datos")

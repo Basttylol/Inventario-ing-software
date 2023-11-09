@@ -1,12 +1,11 @@
 import { useState } from 'react'
-
 import appFirebase from './credenciales'
 import {getAuth, onAuthStateChanged} from 'firebase/auth'
-
 const auth = getAuth(appFirebase)
-
 import {Login} from "./componentes/Login.jsx"
-import { Home } from './componentes/Home'
+import {Home} from './componentes/Home'
+import {Route} from 'react-router-dom'
+
 
 export function App(){
 
@@ -20,11 +19,17 @@ export function App(){
         }
     })
 
-    return(
 
+
+
+    return(
         <div>
-            {usuario ? <Home/> : <Login/>}
+            {usuario ? <Home/> : <Login/>} 
         </div>
 
     )
 }
+
+
+
+export default App
