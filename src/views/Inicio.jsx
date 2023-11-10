@@ -34,8 +34,7 @@ const Inicio = () => {
   }
 
   return (
-    <>
-      <h1>Inicio</h1>
+    <>  
       <button className='btn btn-info' onClick={handleSignOut}>
         Cerrar sesión
       </button>

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Login from './views/Login';
 import Inicio from './views/Inicio'
+import App from './App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
@@ -15,7 +16,7 @@ root.render(
               {/*ruta individual sin usar una como base*/}
               <Route index path='/Login' element={<Login />} />
 
-              <Route>
+              <Route path='/' element={<App />}>
 
                 <Route index element={<Inicio />} />
                 {/* <Route path='dashboard' element={<VerificarUsuario> <DashBoard /> </VerificarUsuario>} />
