@@ -2,10 +2,13 @@ img{
     width: 100px;
     height: auto;
 }
+
+.flex{
+    display: flex;
+}
 .sidebar{ 
-    position: fixed;
     width: 200px;
-    height: 100%;
+    height: calc(100vh - 52px);
     background-color: #077bef;
     
 }
@@ -19,4 +22,17 @@ img{
 .sidebar ul li{
     border-bottom: 1px solid rgba(100, 100, 100, .3);
     padding: 30px 15px;
+}
+
+.navbar{
+    background-color: #077bef;
+    padding: 1rem 2rem;
+    border-bottom: 3px solid grey;
+    height: 80px;
+}
+.content{
+    width: 70%;
+}
+#tabla{
+    text-align: center;
 }

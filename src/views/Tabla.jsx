@@ -1,6 +1,5 @@
 import React, {Component, useEffect, useState} from 'react'
 
-import '../Home.css'
 import {getFirestore, doc, getDoc, getDocs, collection, deleteDoc} from 'firebase/firestore';
 
 
@@ -47,12 +46,8 @@ export const Home = () => {
 
     return(
         <>
-        <div className='container m-5'>
-            <div className='mt-3 mb-3'>
-            <button className=' btn btn-success'>Agregar Producto</button>
-            </div>
-            <div>
-                <table className='table table-bordered'>
+            <div  >
+                <table className='table table-bordered' id='tabla' >
                     <thead>
                     <tr border="2">
                         <th>Nombre</th>
@@ -79,7 +74,6 @@ export const Home = () => {
                 </table>   
                                     
             </div>
-        </div>
         </>
     )
 

@@ -11,7 +11,7 @@ const Sidebar = () =>{
                     <img src={imagenes.img1} alt="Logotipo" />
                 </li>
                 <li>
-                    <NavLink to="/Inicio" className="nav-link" >
+                    <NavLink to="/inventario" className="nav-link" >
                         <i className="fas fa-fw fa-tachometer-alt"></i>
                         <span>Home</span>
                     </NavLink>
