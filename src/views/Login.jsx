@@ -20,7 +20,7 @@ const Login=()=>{
     })
 
     if (usuario!=null){
-        return <Navigate to="/" />
+        return <Navigate to="/inventario" />
     }
 
     const functAutenticacion = async(e) => {
@@ -53,7 +53,7 @@ const Login=()=>{
                 <h1>
                     Iniciar Sesion
                 </h1>
-                <input type="text" placeholder="Usuario" id='email' className='form-control'/>
+                <input type="text" placeholder="Usuario" id='email' className='form-control rounded=lg focus:border focus:border-primary'/>
                 <input type="password" placeholder="Contraseña" id='password' className='form-control'/>
                 
                 <button className='btn btn-primary'>

@@ -17,13 +17,13 @@ const Sidebar = () =>{
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/dashboard" className="nav-link" >
+                    <NavLink to="/agregar" className="nav-link" >
                         <i className="fas fa-fw fa-tachometer-alt"></i>
                         <span>Agregar</span>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/dashboard" className="nav-link" >
+                    <NavLink to="/perfil" className="nav-link" >
                         <i className="fas fa-fw fa-tachometer-alt"></i>
                         <span>Perfil</span>
                     </NavLink>
