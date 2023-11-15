@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import app from '../../credenciales';
 
 const auth = getAuth(app);
+const user = auth.currentUser;
 
 const Navbar = () => {
   const [usuario, setUsuario] = useState(null);
@@ -16,6 +17,13 @@ const Navbar = () => {
   
     return () => unsubscribe();
   }, []);
+
+  useEffect(() => {
+    // Navigate when the usuario state changes
+    if (!usuario) {
+      navigate('/Login');
+    }
+  }, [usuario, navigate]);
   
   const handleSignOut = async () => {
     try {
@@ -28,16 +36,24 @@ const Navbar = () => {
   };
   
   if (!usuario) {
-    navigate('/Login');
     return null;
   }
+
+
+
   
   return (
     <> 
         <div className='navbar'>
-            <button className='' onClick={handleSignOut}>
-            Cerrar sesión
-            </button>
+            <div>
+
+            </div>
+            <div className='p-2'>
+              <button onClick={handleSignOut}>
+              Cerrar sesión
+              </button>
+            </div>
+
         </div> 
 
     </>

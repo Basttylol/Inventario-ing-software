@@ -5,6 +5,7 @@ import Login from './views/Login.jsx';
 import Tabla from './views/Tabla.jsx';
 import Sidebar from './componentes/sidebar.jsx';
 import Agregar from './views/Agregar.jsx';
+import Editar from './views/Editar.jsx';
 
 const App = () => {
   return (
@@ -17,6 +18,9 @@ const App = () => {
               <Route path='/login' element={<Login />} />
               <Route path='/inventario' element={<Tabla />} />
               <Route path='/agregar' element={<Agregar />} />
+              <Route path='/editar' element={<Editar />} />
+              <Route path='/'  />
+
 
             </Routes>
           </div>

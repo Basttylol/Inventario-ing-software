@@ -53,10 +53,10 @@ const Login=()=>{
                 <h1>
                     Iniciar Sesion
                 </h1>
-                <input type="text" placeholder="Usuario" id='email' className='form-control rounded=lg focus:border focus:border-primary'/>
-                <input type="password" placeholder="Contraseña" id='password' className='form-control'/>
+                <input type="text" placeholder="Usuario" id='email' className='mb-2 form-control'/>
+                <input type="password" placeholder="Contraseña" id='password' className='form-control mb-3' autoComplete='off'/>
                 
-                <button className='btn btn-primary'>
+                <button className='btn btn-primary w-100'>
                     Inicia sesion
                 </button>
             </form>

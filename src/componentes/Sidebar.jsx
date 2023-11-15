@@ -22,12 +22,6 @@ const Sidebar = () =>{
                         <span>Agregar</span>
                     </NavLink>
                 </li>
-                <li>
-                    <NavLink to="/perfil" className="nav-link" >
-                        <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Perfil</span>
-                    </NavLink>
-                </li>
             </ul>
 
         </div>

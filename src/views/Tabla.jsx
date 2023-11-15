@@ -1,8 +1,6 @@
 import React, {Component, useEffect, useState} from 'react'
-
 import {getFirestore, doc, getDoc, getDocs, collection, deleteDoc} from 'firebase/firestore';
-
-
+import { Navigate, useNavigate } from 'react-router-dom'
 
 
 
@@ -10,6 +8,8 @@ export const Home = () => {
 
     const [data, setData] = useState([]);
     const querydb = getFirestore();
+    const navigate = useNavigate();
+;
 
     const eliminarDocumento= async (dato)=>{
         try{
@@ -19,6 +19,10 @@ export const Home = () => {
         }catch(error){
             console.error('Error al eliminar documento')
         }
+    }
+
+    const editarDocumento = async (dato)=>{
+        navigate('/editar', { state: dato });
     }
 
     useEffect(() => {
@@ -65,7 +69,7 @@ export const Home = () => {
                                 <td>{producto.marca}</td>
                                 <td>{producto.pais}</td>
                                 <td>
-                                <button className="btn btn-warning"><i className="bi bi-pencil-square"></i></button>
+                                <button onClick={()=>editarDocumento(producto)} className="btn btn-warning"><i className="bi bi-pencil-square"></i></button>
                                 <button onClick={()=>eliminarDocumento(producto.id)} className="btn btn-danger ms-2"><i className="bi bi-trash"></i></button>
                                 </td>
                             </tr>
